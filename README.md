@@ -6,7 +6,6 @@ Desafio para o processo seletivo de 2021 da Tuntscorp
 	Python 2.6 or greater
 	The pip package management tool
 	A Google account
-	Turn on the Google Sheets API and save the credentials in the working directory
 	
 ## Running the code
 #### Install following libraries

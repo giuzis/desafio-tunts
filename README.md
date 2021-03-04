@@ -6,8 +6,11 @@ Prerequisites
     The pip package management tool
     A Google account
     Turn on the Google Sheets API and save the credentials in the working directory
-
-pip install google-api-python-client==1.7.9
-pip install google-auth-httplib2==0.0.3
-pip install google-auth-oauthlib==0.4.0
-python quickstart.py
+run: 
+    pip install google-api-python-client==1.7.9
+    pip install google-auth-httplib2==0.0.3
+    pip install google-auth-oauthlib==0.4.0
+delete:
+    G4:H27 cells in this sheet: https://docs.google.com/spreadsheets/d/1A8DqosDjCkTO_GgahWVxPbkwNXxl8N2pC1Y7ByTEjY0/edit#gid=0
+run: 
+    python tunts.py

@@ -71,18 +71,20 @@ def calculateMeanTests(tests):
     acc = 0
     for test in tests:
         acc += int(test)
-    return acc/len(tests)
+    return ceil(acc/len(tests))
 
 def getStudentStatus(total_classes, number_absences, tests):
     if isFlunkedByAbsence(total_classes, number_absences):
-        return ['Reprovado por falta', 0]
+        print("-", end=", ")
+        return ['Reprovado por Falta', 0]
     else:
         m = calculateMeanTests(tests)
+        print(m, end=", ")
         if m < 50:
             return ['Reprovado por Nota', 0]
         else:
             if m < 70:
-                naf = ceil(100-m)
+                naf = 100-m
                 return ['Exame Final', naf]
             else:
                 return ['Aprovado', 0]
@@ -91,10 +93,18 @@ def main():
     service = setCredentials()
     values = getValues(service)
     total_classes = values[0][0].split()[-1]
+    print("Total de aulas ministradas: " + total_classes)
     result = []
+    for column_name in values[1]:
+        print(column_name, end=", ")
+    print("m, status, nat")
     del values[:2]
     for row in values:
+        for index in range(len(row)):
+            print(row[index], end=", ")
         status = getStudentStatus(int(total_classes), int(row[ABSENCE_NUMBER_INDEX]), row[P1_INDEX:P3_INDEX])
+        print(status[0], end=", ")
+        print(status[1])
         result.append(status)
 
     postValues(service, result)

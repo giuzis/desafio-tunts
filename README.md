@@ -16,7 +16,7 @@ Desafio para o processo seletivo de 2021 da Tuntscorp
 #### 2) Delete G4:H27 cells in this sheet: https://docs.google.com/spreadsheets/d/1A8DqosDjCkTO_GgahWVxPbkwNXxl8N2pC1Y7ByTEjY0/edit#gid=0
 #### 3) Run: 
 	python tunts.py
-	
+#### Google will ask access to your account, please allow it.	
 #### 4) Verify the sheet to see if the deleted cells were populated
 	if yes: great! you made it.
 	else: contact me so we find out what went wrong :)
